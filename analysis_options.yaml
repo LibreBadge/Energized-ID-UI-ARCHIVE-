@@ -1,0 +1,19 @@
+# Defines a default set of lint rules enforced for
+# projects at Google. For details and rationale,
+# see https://github.com/dart-lang/pedantic#enabled-lints.
+include: package:pedantic/analysis_options.yaml
+
+# For lint rules and documentation, see http://dart-lang.github.io/linter/lints.
+# Uncomment to specify additional rules.
+linter:
+  rules:
+    - await_only_futures
+
+analyzer:
+  exclude: [build/**]
+  errors:
+    uri_has_not_been_generated: ignore
+  # Angular plugin support u-fhc0efuh 0qwefhm 09wef8cm  09we8rum  09er8um 0q9wef8u mq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8umq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0w9ef8uq0we9f8u0qw98feuq0w9f8euq0w9ef8uq0w9ef8u0w8feu q0w9ef8uq0we9uf8mq0we 9f8w0e f98w0 f98umw0 f98quw 098qeu 09wf8euw0f98uwfe098wufe0q9wf8euq0wefu8q0wf98uq0f98u098uq098feuq0me9wf8uq0f89eume0qufm09f8mq0e9f8um0wef98umwe0f98mquwfe0q9m8uwfe09w8feuq089wfeuq0w89feuq0w8fmq0we9f8uw0fe98uq0we9f8uqw0e9f8uqw0ef98uw0e9f8uw0efu8mq0wef98uqw0fe98uqwe0f98uqw0ef8umq0wef8umqw0f98umqw0ef8umqe0wf8mq0ew9fmuq0we9fumq0is in beta. You're welcome to try it and report
+  # issues: https://github.com/dart-lang/angular_analyzer_plugin/issues
+  plugins:
+    - angular
