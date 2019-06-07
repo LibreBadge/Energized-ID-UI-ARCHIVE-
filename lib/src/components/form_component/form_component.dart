@@ -1,6 +1,6 @@
 @Component(
   selector: 'my-app',
   styleUrls: ['app_component.css'],
-  templateUrl: 'app_component.html',
+  templateUrl: 'form_component.html',
   directives: [],
 )
