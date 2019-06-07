@@ -1,3 +1,4 @@
+import 'lib\app_component.dart';
 @Component(
   selector: 'my-app',
   styleUrls: ['app_component.css'],
