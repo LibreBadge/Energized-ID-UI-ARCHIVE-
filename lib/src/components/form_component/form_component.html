@@ -1,89 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-    <script src="js.js"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                
-               <h4> Vertical CR80 Example </h4> <!--this is the name of the template, hookup to dart-->
-            </div>
-            <div class="panel-body">
-                <div class="form-group">
-                        <label for="firstName">First Name:</label>
-                        <input autocomplete="off" type="text" class="form-control" id="firstName">
-                      </div>
-                    <div class="form-group">
-                        <label for="middletName">Middle Name:</label>
-                        <input autocomplete="off" type="text" class="mdc-text-field__input" id="middleName">
-                        </div>
-                <div class="form-group">
-                        <label for="lastName">Last Name:</label>
-                        <input autocomplete="off" type="text" class="form-control" id="lastName">
-                      </div>
-                <div class="form-group">
-                        <label for="studentID#">Student ID#:</label>
-                        <input autocomplete="off" type="text" class="form-control" id="studentID#">
-                    </div>
-                <div class="form-group">
-                        <label for="gradeLevel">Grade:</label>
-                        <select class="form-control" id="gradeLevel">
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>Faculty</option>
-                </select>
-              
-<video id="player" controls autoplay></video>
-<button id="capture">Capture</button>
-<canvas id="canvas" width="200 " height="300"></canvas>
-<script>
-  const player = document.getElementById('player');
-  const captureButton = document.getElementById('capture');
-  const constraints = {
-    video: true,
-  };
-  captureButton.addEventListener('click', () => {
-    // Draw the video frame to the canvas.
-    context.drawImage(player, 0, 0, canvas.width, canvas.height);
-        // Stop all video streams.
-        player.srcObject.getVideoTracks().forEach(track => track.stop());
-  });
-  // Attach the video stream to the video element and autoplay.
-  navigator.mediaDevices.getUserMedia(constraints)
-    .then((stream) => {
-      player.srcObject = stream;
-    });
-</script>
-
-
-                </div>
-            </div>
-            </div>
+<div class="container">
+    <h1>Hero Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name&nbsp;*</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+      <div class="row">
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-     
-
-              
-    
-</body>
-</html>
+        <small class="col text-right">*&nbsp;Required</small>
+      </div>
+    </form>
+  </div>

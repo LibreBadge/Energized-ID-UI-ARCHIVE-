@@ -1,7 +1,18 @@
-import 'lib\app_component.dart';
+import 'package:angular/angular.dart';
+import 'package:angular_forms/angular_forms.dart';
+
+import 'package:energized_id/energized_id.dart';
+
 @Component(
-  selector: 'my-app',
-  styleUrls: ['app_component.css'],
-  templateUrl: 'form_component.html',
-  directives: [],
+  selector: 'form_component',
+  templateUrl: ['form_component.html'],
+  directives: [coreDirectives, formDirectives],
 )
+class form_component {
+  Student model = Student('Micah', 'Guttman', 10);
+  bool submitted = false;
+
+  List<String> get powers => _powers;
+
+  void onSubmit() => submitted = true;
+}
